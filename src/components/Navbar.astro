@@ -1,0 +1,39 @@
+---
+const navItems: {name: string, url: string}[] = [
+    {
+        "name": "About",
+        "url": "/about"
+    },
+    {
+        "name": "Kava",
+        "url": "/kava"
+    },
+    {
+        "name": "Menu",
+        "url": "/menu"
+    },
+    {
+        "name": "Events",
+        "url": "/events"
+    },
+    {
+        "name": "Contact",
+        "url": "/contact"
+    },
+]
+---
+
+<div class="navbar bg-base-100">
+    <div class="flex-1">
+        <a class="btn btn-ghost text-xl">Kava Kave</a>
+    </div>
+    <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+            { navItems.map(item => (
+                <>
+                    <li><a href={ item.url }>{ item.name }</a></li>
+                </>
+            )) }
+      </ul>
+    </div>
+</div>
