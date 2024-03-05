@@ -16,7 +16,7 @@ const data = Astro.props;
     <h1 class="text-center">{ data.title }</h1>
 
     <div class="border-2 border-primary rounded py-4 px-8">
-        { data.blob1 }
+        <p class="whitespace-pre-wrap">{ data.blob1 }</p>
     </div>
 </div>
 
@@ -30,7 +30,7 @@ const data = Astro.props;
 
     <div class="mx-auto">
         <div class="prose">
-            { data.blob2 }
+            <p class="whitespace-pre-wrap">{ data.blob2 }</p>
         </div>
     </div>
 </div>

@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Intro from "../layouts/Intro.astro";
+
+const blob1 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`;
+const blob2 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`;
+
+const faq = [
+    {
+        q: "Question 1",
+        a: "The answer to question 1 is here."
+    },
+    {
+        q: "Question 2",
+        a: "The answer to question 2 is here."
+    },
+    {
+        q: "Question 3",
+        a: "The answer to question 3 is here."
+    },
+]
+---
+<Layout title="What is kava?">
+    <main>
+        <Intro 
+            title="What is kava?"
+            blob1={ blob1 }
+            blob2={ blob2 }
+            image1="https://placehold.co/700x400"
+            image1Alt="Placeholder image"
+            image2="https://placehold.co/700x400"
+            image2Alt="Placeholder image"
+        />
+
+        <!-- faq -->
+        <div class="mb-16">
+            <div class="container prose mx-auto my-20">
+                <h2 class="">FAQ</h2>
+
+                {faq.map((item) => (
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="faq" checked="checked" />
+
+                        <div class="collapse-title text-xl font-medium">
+                            {item.q}
+                        </div>
+                        <div class="collapse-content">
+                            <p>{item.a}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
