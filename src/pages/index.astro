@@ -49,6 +49,10 @@ const events = [
 
 		<!-- events snippet -->
 		<div class="container mx-auto py-20">
+			<div class="prose mx-auto mb-16">
+				<h2 class="text-center">Events</h2>
+			</div>
+
 			<div class="grid grid-cols-3">
 				{events.reverse().map(event => (
 					<div class="card w-96 bg-base-100 shadow-xl mx-auto">
@@ -57,51 +61,55 @@ const events = [
 							<h2 class="card-title">{ event.title }</h2>
 							<small>{ event.date }</small>
 							<p>{ event.desc }</p>
-							<div class="card-actions justify-end">
-								<a href="#" role="button" class="btn btn-primary">View event</a>
+							<div class="card-actions">
+								<a href="#" role="button" class="btn btn-secondary">View event</a>
 							</div>
 						</div>
 					</div>
 				))}
+				
 			</div>
 
-			<a href="/events" role="button" class="btn btn-primary btn-outline">All events</a>
+			<a href="/events" role="button" class="btn btn-primary mt-12 ml-4">All events</a>
 		</div>
 
 		<!-- kava snippet -->
-		<div class="my-20">
+		<div class="my-16">
 			<div class="relative flex flex-wrap justify-evenly" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
 				<div class="absolute w-full h-full" style="background-color: rgba(0,0,0,0.6)"></div>
-				<div class="z-10 px-16 py-32">
-					<h3>Menu</h3>
+				
+				<div class="z-10 px-16 py-32 prose text-neutral-content">
+					<h3 class="text-neutral-content">Menu</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
 					<a href="/menu" role="button" class="btn btn-primary">Menu</a>
 				</div>
 
-				<div class="z-10 px-16 py-32">
-					<h3>Kava</h3>
+				<div class="z-10 px-16 py-32 prose text-neutral-content">
+					<h3 class="text-neutral-content">Kava</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-					<a href="/kava" role="button" class="btn btn-primary">Kava</a>
+					<a href="/kava" role="button" class="btn btn-secondary">Kava</a>
 				</div>
 			</div>
 		</div>
 
 		<!-- testimonials -->
 		<div class="container mx-auto py-20">
-			<h2 class="text-center mb-16">Testimonials</h2>
+			<div class="prose mx-auto mb-16">
+				<h2 class="text-center">Testimonials</h2>
+			</div>
 			
-			<div class="grid grid-cols-3">
+			<div class="grid grid-cols-3 items-start">
 				<div class="chat chat-start">
-					<div class="chat-header">Customer 1</div>	
+					<div class="chat-header mb-4">Customer 1</div>	
 					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</div>
 				</div>	
 				<div class="chat chat-start">
-					<div class="chat-header">Customer 2</div>	
+					<div class="chat-header mb-4">Customer 2</div>	
 					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</div>
 				</div>	
 				<div class="chat chat-start">
-					<div class="chat-header">Customer 3</div>	
-					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</div>
+					<div class="chat-header mb-4">Customer 3</div>	
+					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
 				</div>	
 			</div>
 		</div>
