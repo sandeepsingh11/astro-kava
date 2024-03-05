@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Intro from "../layouts/Intro.astro";
+
+const blob1 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>";
+const blob2 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>";
+---
+
+<Layout title="About">
+    <main class="container mx-auto">
+        <Intro 
+            title="About Kava Kave"
+            blob1={ blob1 }
+            blob2={ blob2 }
+            image1="https://placehold.co/700x400"
+            image1Alt="Placeholder image"
+            image2="https://placehold.co/700x400"
+            image2Alt="Placeholder image"
+        />
+
+        <!-- team section -->
+        <div class="mb-16">
+            <div class="prose mx-auto my-20">
+                <h2 class="text-center">The awesome team</h2>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <p>Yosuke Suzuki</p>
+                        <h2 class="card-title">Title</h2>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <p>Yosuke Suzuki</p>
+                        <h2 class="card-title">Title</h2>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <p>Yosuke Suzuki</p>
+                        <h2 class="card-title">Title</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

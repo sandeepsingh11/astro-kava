@@ -1,0 +1,36 @@
+---
+interface Props {
+    title: string;
+    blob1: string;
+    blob2: string;
+    image1: string;
+    image1Alt: string;
+    image2: string;
+    image2Alt: string;
+}
+
+const data = Astro.props;
+---
+
+<div class="prose mx-auto my-20">
+    <h1 class="text-center">{ data.title }</h1>
+
+    <div class="border-2 border-primary rounded py-4 px-8">
+        { data.blob1 }
+    </div>
+</div>
+
+<div class="grid grid-cols-2 items-center">
+    <div class="mx-auto">
+        <div class="max-w-[400px] max-h-400px">
+            <img src={ data.image1 } alt={ data.image1Alt } class="w-full h-full object-cover border border-primary rounded lg:-translate-x-[25%] lg:translate-y-[10%]">
+            <img src={ data.image2 } alt={ data.image2Alt } class="w-full h-full object-cover border border-primary rounded lg:translate-x-[25%] lg:-translate-y-[10%]">
+        </div>
+    </div>
+
+    <div class="mx-auto">
+        <div class="prose">
+            { data.blob2 }
+        </div>
+    </div>
+</div>
