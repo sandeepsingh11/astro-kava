@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const allEvents = [
+    {
+        "type": "Upcoming",
+        "events": [
+            {
+                title: 'Event 4',
+                date: '2023-03-15',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            },
+            {
+                title: 'Event 5',
+                date: '2023-03-16',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            },
+            {
+                title: 'Event 6',
+                date: '2023-03-17',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            },
+        ]
+    },
+    {
+        "type": "Past",
+        "events": [
+            {
+                title: 'Event 1',
+                date: '2023-03-01',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            },
+            {
+                title: 'Event 2',
+                date: '2023-03-02',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            },
+            {
+                title: 'Event 3',
+                date: '2023-03-03',
+                time: '19:00',
+                location: 'Kava Kave',
+                image: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                imageAlt: "shoes",
+                desc: 'Description of the event.',
+            }
+        ]
+    }
+]
+
+// reverse so that most recent Past events show first
+allEvents[1].events = allEvents[1].events.reverse();
+---
+
+<Layout title="Events">
+    <main>
+        <div class="prose mx-auto my-20">
+            <h1 class="text-center mb-16">Events</h1>
+        </div>
+
+        <div class="container mx-auto my-20">
+            {allEvents.map(category => (
+                <div class="mb-20">
+                    <h2 class="mb-8">{category.type} events</h2>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        {category.events.map(event => (
+                            <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+                                <figure><img src={event.image} alt={event.imageAlt} /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">{event.title}</h2>
+                                    <p>{event.date} - {event.time}</p>
+                                    <p>{event.location}</p>
+                                    <p>{event.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </main>
+</Layout>
