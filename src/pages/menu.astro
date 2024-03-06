@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const menu = [
+    {
+        "type": "Lunch",
+        "items": [
+            {
+                "name": "Egg Sandwich",
+                "price": "3.00",
+                "desc": "Two eggs, tomato, and lettuce on a white bread roll."
+            },
+            {
+                "name": "Tuna Salad",
+                "price": "3.50",
+                "desc": "Tuna, mayo, lettuce, and tomato on a white bread roll."
+            },
+            {
+                "name": "Grilled Cheese",
+                "price": "4.00",
+                "desc": "American cheese grilled on a white bread roll."
+            }
+        ]
+    },
+    {
+        "type": "Dinner",
+        "items": [
+            {
+                "name": "Chicken Alfredo",
+                "price": "8.00",
+                "desc": "Chicken breast cooked in a creamy Alfredo sauce with pasta."
+            },
+            {
+                "name": "Beef Stroganoff",
+                "price": "10.00",
+                "desc": "Beef in a rich cream sauce with mashed potatoes and vegetables."
+            },
+            {
+                "name": "Lasagna",
+                "price": "12.00",
+                "desc": "Layered pasta with a variety of sauces, cheeses, and vegetables."
+            }
+        ],
+    },
+    {
+        "type": "Drinks",
+        "items": [
+            {
+                "name": "Kava",
+                "price": "7.00",
+                "desc": "Herbal tea infused with honey."
+            },
+            {
+                "name": "Kratom",
+                "price": "5.50",
+                "desc": "Herbal tea infused with ginger root."
+            },
+            {
+                "name": "Water",
+                "price": "1.00",
+                "desc": "16-ounce bottled water."
+            }
+        ]
+    }
+];
+---
+
+<Layout title="Menu">
+    <main>
+        <div class="prose mx-auto my-20">
+            <h1 class="text-center mb-16">Menu</h1>
+            
+            <div class="flex justify-center">
+                <a href="/" role="button" class="btn btn-primary mx-auto text-center">PDF</a>
+            </div>
+        </div>
+        
+        <!-- menu -->
+        <div class="container mx-auto my-20">
+            {menu.map((section) => (
+                <div class="mb-20">
+                    <h2 class="mb-4 font-medium">{section.type}</h2>
+                    
+                    <div class="grid grid-cols-2 gap-12">
+                        {section.items.map((item) => (
+                            <div class="grid grid-cols-2">
+                                <div><h3>{item.name}</h3></div>
+                                <div class="justify-self-end">{item.price}</div>
+                                <div class="col-span-2">
+                                    <p>{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </main>
+</Layout>
