@@ -30,4 +30,15 @@ _inputs:
   image2:
     type: image
     cascade: true
+  price:
+    type: number
+    cascade: true
+  PDF:
+    type: file
+    options:
+      accepts_mime_types:
+        - application/pdf
+      empty_type: string
+      paths:
+    cascade: true
 timezone: EST
