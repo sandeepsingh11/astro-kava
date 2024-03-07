@@ -7,7 +7,7 @@ paths:
   layouts:
 collections_config:
   data:
-    path: src/data
+    path: data
 _enabled_editors:
   - visual
   - content
