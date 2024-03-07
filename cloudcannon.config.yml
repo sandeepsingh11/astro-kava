@@ -1,0 +1,12 @@
+source: /src
+paths:
+  uploads: uploads
+  static: ''
+  collections: ''
+  data: /data
+  layouts:
+_enabled_editors:
+  - visual
+  - content
+  - data
+timezone: EST
