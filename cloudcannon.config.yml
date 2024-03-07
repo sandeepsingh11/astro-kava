@@ -32,8 +32,13 @@ _inputs:
     cascade: true
   price:
     type: number
+    options:
+      min: 0
+      max:
+      step: 2
+      empty_type: number
     cascade: true
-  PDF:
+  Pdf:
     type: file
     options:
       accepts_mime_types:
