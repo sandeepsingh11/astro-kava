@@ -18,7 +18,16 @@ _enabled_editors:
   - content
   - data
 _inputs:
-  blob:
+  blob1:
     type: textarea
+    cascade: true
+  blob2:
+    type: textarea
+    cascade: true
+  image1:
+    type: image
+    cascade: true
+  image2:
+    type: image
     cascade: true
 timezone: EST
