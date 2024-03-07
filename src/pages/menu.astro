@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro"
                         {section.items.map((item) => (
                             <div class="grid grid-cols-2">
                                 <div><h3>{item.name}</h3></div>
-                                <div class="justify-self-end">{item.price}</div>
+                                <div class="justify-self-end">{item.price.toFixed(2)}</div>
                                 <div class="col-span-2">
                                     <p>{item.desc}</p>
                                 </div>
