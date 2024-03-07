@@ -1,10 +1,13 @@
-source: /src
+source: src
 paths:
-  uploads: uploads
-  static: ''
+  uploads: public/uploads
+  static: public
   collections: ''
-  data: /data
+  data: data
   layouts:
+collections_config:
+  data:
+    path: src/data
 _enabled_editors:
   - visual
   - content
