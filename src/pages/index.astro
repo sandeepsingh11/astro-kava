@@ -54,19 +54,25 @@ const events = [
 
 			<div class="grid grid-cols-3">
 				{events.reverse().map(event => (
-					<div class="card w-96 bg-base-100 shadow-xl mx-auto">
-						<figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-						<div class="card-body">
-							<h2 class="card-title">{ event.title }</h2>
+					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+						<a href="#">
+							<img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+						</a>
+						<div class="p-5">
+							<a href="#">
+								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{ event.title }</h5>
+							</a>
 							<small>{ event.date }</small>
-							<p>{ event.desc }</p>
-							<div class="card-actions">
-								<a href="#" role="button" class="btn btn-secondary">View event</a>
-							</div>
+							<p class="mb-3 font-normal text-gray-700">{ event.desc }</p>
+							<a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+								View event
+								<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+								</svg>
+							</a>
 						</div>
 					</div>
 				))}
-				
 			</div>
 
 			<a href="/events" role="button" class="btn btn-primary mt-12 ml-4">All events</a>
@@ -77,16 +83,20 @@ const events = [
 			<div class="relative flex flex-wrap justify-evenly" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
 				<div class="absolute w-full h-full" style="background-color: rgba(0,0,0,0.6)"></div>
 				
-				<div class="z-10 px-16 py-32 prose text-neutral-content">
-					<h3 class="text-neutral-content">Menu</h3>
+				<div class="z-10 px-16 py-32 prose text-white">
+					<h3 class="text-white">Menu</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-					<a href="/menu" role="button" class="btn btn-primary">Menu</a>
+					<a href="/menu" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 no-underline">
+						Menu
+					</a>
 				</div>
 
-				<div class="z-10 px-16 py-32 prose text-neutral-content">
-					<h3 class="text-neutral-content">Kava</h3>
+				<div class="z-10 px-16 py-32 prose text-white">
+					<h3 class="text-white">Kava</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-					<a href="/kava" role="button" class="btn btn-secondary">Kava</a>
+					<a href="/kava" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 no-underline">
+						Kava
+					</a>
 				</div>
 			</div>
 		</div>
@@ -97,19 +107,43 @@ const events = [
 				<h2 class="text-center">Testimonials</h2>
 			</div>
 			
-			<div class="grid grid-cols-3 items-start">
-				<div class="chat chat-start">
-					<div class="chat-header mb-4">Customer 1</div>	
-					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</div>
-				</div>	
-				<div class="chat chat-start">
-					<div class="chat-header mb-4">Customer 2</div>	
-					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</div>
-				</div>	
-				<div class="chat chat-start">
-					<div class="chat-header mb-4">Customer 3</div>	
-					<div class="chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-				</div>	
+			<div class="grid grid-cols-3 items-start gap-8">
+				<figure class="max-w-screen-md">
+					<blockquote>
+						<p class="text-2xl font-semibold text-gray-900">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+					</blockquote>
+					<figcaption class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
+						<img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
+						<div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300">
+							<cite class="pe-3 font-medium text-gray-900">Customer 1</cite>
+							<cite class="ps-3 text-sm text-gray-500">CTO at Flowbite</cite>
+						</div>
+					</figcaption>
+				</figure>
+				<figure class="max-w-screen-md">
+					<blockquote>
+						<p class="text-2xl font-semibold text-gray-900">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+					</blockquote>
+					<figcaption class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
+						<img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
+						<div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300">
+							<cite class="pe-3 font-medium text-gray-900">Customer 2</cite>
+							<cite class="ps-3 text-sm text-gray-500">CTO at Flowbite</cite>
+						</div>
+					</figcaption>
+				</figure>
+				<figure class="max-w-screen-md">
+					<blockquote>
+						<p class="text-2xl font-semibold text-gray-900">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+					</blockquote>
+					<figcaption class="flex items-center mt-6 space-x-3 rtl:space-x-reverse">
+						<img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
+						<div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300">
+							<cite class="pe-3 font-medium text-gray-900">Customer 3</cite>
+							<cite class="ps-3 text-sm text-gray-500">CTO at Flowbite</cite>
+						</div>
+					</figcaption>
+				</figure>
 			</div>
 		</div>
 	</main>
