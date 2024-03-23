@@ -33,11 +33,11 @@ const events = [
 	<main>
 		<!-- about snippet -->
 		<div id="about-snippet" class="container mx-auto py-20">
-			<div class="flex justify-center gap-16">
-				<div class="prose">
+			<div class="flex flex-wrap justify-center gap-16">
+				<div class="prose p-4">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 		
-					<a href="/about" role="button" class="btn btn-primary">Read more</a>
+					<a href="/about" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 no-underline">Read more</a>
 				</div>
 
 				<div class="max-w-[400px] max-h-400px">
@@ -52,9 +52,9 @@ const events = [
 				<h2 class="text-center">Events</h2>
 			</div>
 
-			<div class="grid grid-cols-3">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
 				{events.reverse().map(event => (
-					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+					<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-auto">
 						<a href="#">
 							<img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
 						</a>
@@ -75,28 +75,32 @@ const events = [
 				))}
 			</div>
 
-			<a href="/events" role="button" class="btn btn-primary mt-12 ml-4">All events</a>
+			<a href="/events" class="inline-flex items-center ml-4 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">All events</a>
 		</div>
 
-		<!-- kava snippet -->
+		<!-- menu and kava snippet -->
 		<div class="my-16">
-			<div class="relative flex flex-wrap justify-evenly" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-				<div class="absolute w-full h-full" style="background-color: rgba(0,0,0,0.6)"></div>
+			<div class="flex flex-wrap">
+				<!-- image -->
+				<div class="bg-cover bg-center bg-no-repeat bg-[url('https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg')] bg-gray-400 bg-blend-multiply w-full md:w-1/2 h-[300px] md:h-[inherit]"></div>
 				
-				<div class="z-10 px-16 py-32 prose text-white">
-					<h3 class="text-white">Menu</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-					<a href="/menu" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 no-underline">
-						Menu
-					</a>
-				</div>
-
-				<div class="z-10 px-16 py-32 prose text-white">
-					<h3 class="text-white">Kava</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-					<a href="/kava" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 no-underline">
-						Kava
-					</a>
+				<!-- body -->
+				<div class="w-full md:w-1/2 bg-slate-900">
+					<div class="prose mx-auto text-white">
+						<!-- menu snippet -->
+						<div class="pt-16 md:pt-28 pb-8 md:pb-12 px-12 md:px-8">
+							<h3 class="text-white mt-0">Menu</h3>
+							<p>Looking for our delicious menu? You've come to the right spot!</p>
+							<a href="/menu" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center  rounded-lg border border-white text-white hover:text-black hover:bg-white focus:ring-white focus:bg-white focus:text-black no-underline">Menu</a>
+						</div>
+		
+						<!-- kava snippet -->
+						<div class="pb-16 md:pb-28 pt-8 md:pt-12 px-12 md:px-8">
+							<h3 class="text-white mt-0">Kava</h3>
+							<p>Kava has been around a long time but only recently has it gained popularity. Check out what the hype is about!</p>
+							<a href="/kava" class="inline-block hover:text-gray-900 py-3 px-5 text-base font-medium text-center  rounded-lg border border-white text-white hover:text-black hover:bg-white focus:ring-white focus:bg-white focus:text-black no-underline">Kava</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -107,7 +111,7 @@ const events = [
 				<h2 class="text-center">Testimonials</h2>
 			</div>
 			
-			<div class="grid grid-cols-3 items-start gap-8">
+			<div class="grid grid-cols-1 md:grid-cols-3 items-start gap-x-8 gap-y-20 px-8">
 				<figure class="max-w-screen-md">
 					<blockquote>
 						<p class="text-2xl font-semibold text-gray-900">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
