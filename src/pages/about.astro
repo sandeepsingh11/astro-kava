@@ -23,7 +23,7 @@ const team = [
 ---
 
 <Layout title="About">
-    <main class="container mx-auto">
+    <main class="mx-auto">
         <Intro 
             title="About Kava Kave"
             blob1={ about.blob1 }
@@ -32,6 +32,8 @@ const team = [
             image1Alt={ about.image1Alt }
             image2={ about.image2 }
             image2Alt={ about.image2Alt }
+            image3={ about.image3 }
+            image3Alt={ about.image3Alt }
         />
 
         <!-- team section -->
@@ -42,13 +44,15 @@ const team = [
             
             <div class="grid grid-cols-3">
                 {team.map((person) => (
-                    <div class="card w-96 bg-base-100 shadow-xl mx-auto">
-                        <figure><img src={person.image} alt={person.name} /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">{person.name}</h2>
-                            <p>{person.role}</p>
-                        </div>
-                    </div>
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-auto">
+                        <img class="rounded-t-lg" src={ person.image } alt={ person.name } />
+						<div class="p-5">
+							<a href="#">
+								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{ person.name }</h5>
+							</a>
+							<p class="mb-3 font-normal text-gray-700">{ person.role }</p>
+						</div>
+					</div>
                 ))}
             </div>
         </div>

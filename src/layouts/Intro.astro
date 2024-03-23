@@ -7,24 +7,36 @@ interface Props {
     image1Alt: string;
     image2: string;
     image2Alt: string;
+    image3: string;
+    image3Alt: string;
 }
 
 const data = Astro.props;
 ---
 
-<div class="prose mx-auto my-20">
-    <h1 class="text-center">{ data.title }</h1>
-
-    <div class="border-2 border-primary rounded py-4 px-8">
-        <p class="whitespace-pre-wrap">{ data.blob1 }</p>
+<div class="bg-cover bg-center bg-no-repeat bg-[url('https://flowbite.com/docs/images/blog/image-1.jpg')] bg-gray-700 bg-blend-multiply mb-20">
+    <div class="prose mx-auto">
+        <h1 class="text-center text-white py-36">{ data.title }</h1>
     </div>
 </div>
+    
+<div class="grid grid-cols-2 gap-y-16 items-center">
+    <div class="mx-auto">
+        <div class="prose">
+            <p class="whitespace-pre-wrap">{ data.blob1 }</p>
+        </div>
+    </div>
 
-<div class="grid grid-cols-2 items-center">
     <div class="mx-auto">
         <div class="max-w-[400px] max-h-400px">
-            <img src={ data.image1 } alt={ data.image1Alt } class="w-full h-full object-cover border border-primary rounded lg:-translate-x-[25%] lg:translate-y-[10%]">
-            <img src={ data.image2 } alt={ data.image2Alt } class="w-full h-full object-cover border border-primary rounded lg:translate-x-[25%] lg:-translate-y-[10%]">
+            <img src={ data.image1 } alt={ data.image1Alt } class="w-full h-full object-cover border border-primary rounded">
+        </div>
+    </div>
+
+    <div class="mx-auto">
+        <div class="max-w-[400px] max-h-400px">
+            <img src={ data.image2 } alt={ data.image2Alt } class="w-full h-full object-cover border border-primary rounded lg:-translate-x-[25%] lg:translate-y-[10%]">
+            <img src={ data.image3 } alt={ data.image3Alt } class="w-full h-full object-cover border border-primary rounded lg:translate-x-[25%] lg:-translate-y-[10%]">
         </div>
     </div>
 
